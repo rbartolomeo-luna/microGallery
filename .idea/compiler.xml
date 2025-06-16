@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="17">
+      <module name="classic.Template.domain.commonMain" target="21" />
+      <module name="classic.Template.domain.commonTest" target="21" />
+      <module name="classic.Template.domain.jvmMain~1" target="21" />
+      <module name="classic.Template.domain.jvmTest~1" target="21" />
+      <module name="classic.Template.repository.commonMain" target="21" />
+      <module name="classic.Template.repository.commonTest" target="21" />
+      <module name="classic.Template.repository.jvmMain~1" target="21" />
+      <module name="classic.Template.repository.jvmTest~1" target="21" />
+      <module name="Template_KMP.Template.error.commonMain" target="21" />
+      <module name="Template_KMP.Template.error.commonTest" target="21" />
+      <module name="Template_KMP.Template.error.jvmMain~1" target="21" />
+      <module name="Template_KMP.Template.error.jvmTest~1" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

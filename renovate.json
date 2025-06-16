@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "config:recommended"
+  ],
+  "automerge": true,
+  "automergeType": "pr",
+  "ignoreTests": true,
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "major"
+      ],
+      "automerge": true
+    }
+  ]
+}

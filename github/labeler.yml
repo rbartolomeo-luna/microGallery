@@ -1,0 +1,9 @@
+"🤖 Android":
+- changed-files:
+  - any-glob-to-any-file: ['Template_Android/**']
+"🍎 iOS":
+- changed-files:
+  - any-glob-to-any-file: ['Template_iOS/**']
+"🫏 KMP":
+- changed-files:
+  - any-glob-to-any-file: ['Template_KMP/**']
