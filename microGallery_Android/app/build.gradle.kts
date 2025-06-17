@@ -17,22 +17,17 @@ android {
 }
 
 dependencies {
+    //implementation(libs.navigationRuntimeJvmstubs)
+    implementation(libs.androidxHiltNavigationCompose)
+    //implementation(libs.jetbrains.compose.ui.util)
+    //implementation(libs.navigationComposeJvmstubs)
     coreLibraryDesugaring(libs.desugarJdkLibs)
-
     implementation(platform(libs.androidxComposeBom))
     implementation(platform(libs.lbBom))
-
-
-    //implementation(libs.androidxAppcompat)
-    //implementation(libs.androidxComposeFoundation)
-
-
+    implementation(libs.androidxComposeMaterial3)
     implementation(libs.lbCore)
     implementation(libs.lbcPresenter)
-
     implementation(projects.coreUi)
     implementation(projects.domain)
-    //compileOnly(projects.featureTemplate)
-   // implementation(projects.featureTemplateUi)
     implementation(projects.shared)
 }

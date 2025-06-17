@@ -1,4 +1,4 @@
-package com.example.compose
+package studio.lunabee.amicrogallery.android.core.ui.theme.redmaterial
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF902500)

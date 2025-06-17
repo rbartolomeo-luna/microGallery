@@ -54,9 +54,13 @@ lbcPresenter = "1.4.0"
 skie = "0.10.2-preview.2.1.20"
 uiToolingPreviewDesktop = "1.7.0"
 material3Jvmstubs = "1.4.0-alpha15"
+navigationRuntimeJvmstubs = "2.9.0"
+navigationComposeJvmstubs = "2.9.0"
+
 
 [libraries]
-
+jetbrains-compose-ui-util = { module = "org.jetbrains.compose.ui:ui-util", version = "1.7.1" }
+androidxHiltNavigationCompose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
 androidxActivityCompose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivityCompose" }
 androidxAppcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppcompat" }
 androidxComposeBom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
@@ -92,3 +96,5 @@ lbcCore = { group = "studio.lunabee.compose", name = "lbccore", version.ref = "l
 lbcPresenter = { group = "studio.lunabee.compose", name = "lbcpresenter", version.ref = "lbcPresenter" }
 uiToolingPreviewDesktop = { group = "androidx.compose.ui", name = "ui-tooling-preview-desktop", version.ref = "uiToolingPreviewDesktop" }
 material3Jvmstubs = { group = "androidx.compose.material3", name = "material3-jvmstubs", version.ref = "material3Jvmstubs" }
+navigationRuntimeJvmstubs = { group = "androidx.navigation", name = "navigation-runtime-jvmstubs", version.ref = "navigationRuntimeJvmstubs" }
+navigationComposeJvmstubs = { group = "androidx.navigation", name = "navigation-compose-jvmstubs", version.ref = "navigationComposeJvmstubs" }

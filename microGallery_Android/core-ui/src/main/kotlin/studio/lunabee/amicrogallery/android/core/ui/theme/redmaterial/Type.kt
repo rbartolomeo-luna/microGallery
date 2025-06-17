@@ -1,4 +1,4 @@
-package studio.lunabee.amicrogallery.android.core.ui.ui.theme
+package studio.lunabee.amicrogallery.android.core.ui.theme.redmaterial
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.FontFamily
