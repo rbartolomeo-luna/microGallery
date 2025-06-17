@@ -52,6 +52,8 @@ lbResources = "1.0.0"
 lbcCore = "1.8.0"
 lbcPresenter = "1.4.0"
 skie = "0.10.2-preview.2.1.20"
+uiToolingPreviewDesktop = "1.7.0"
+material3Jvmstubs = "1.4.0-alpha15"
 
 [libraries]
 
@@ -88,3 +90,5 @@ lbKtorKermit = { group = "studio.lunabee", name = "lbktor-kermit" }
 lbMultiplatformLibrary = { group = "studio.lunabee.plugins.multiplatform.library", name = "studio.lunabee.plugins.multiplatform.library.gradle.plugin", version.ref = "lbMultiplatformLibrary" }
 lbcCore = { group = "studio.lunabee.compose", name = "lbccore", version.ref = "lbcCore" }
 lbcPresenter = { group = "studio.lunabee.compose", name = "lbcpresenter", version.ref = "lbcPresenter" }
+uiToolingPreviewDesktop = { group = "androidx.compose.ui", name = "ui-tooling-preview-desktop", version.ref = "uiToolingPreviewDesktop" }
+material3Jvmstubs = { group = "androidx.compose.material3", name = "material3-jvmstubs", version.ref = "material3Jvmstubs" }

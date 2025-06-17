@@ -22,13 +22,11 @@ dependencies {
     implementation(platform(libs.androidxComposeBom))
     implementation(platform(libs.lbBom))
 
-    implementation(libs.androidxActivityCompose)
-    implementation(libs.androidxAppcompat)
-    implementation(libs.androidxComposeFoundation)
-    implementation(libs.androidxComposeMaterial3)
-    implementation(libs.androidxComposeUi)
-    implementation(libs.androidxNavigationCompose)
-    implementation(libs.kotlinxSerializationJson)
+
+    //implementation(libs.androidxAppcompat)
+    //implementation(libs.androidxComposeFoundation)
+
+
     implementation(libs.lbCore)
     implementation(libs.lbcPresenter)
 
