@@ -39,7 +39,7 @@ fun RootDrawer(
 @Composable
 fun MicroGalleryRootScreen(
     modifier: Modifier = Modifier,
-    applySystemBarPadding: Boolean = false,
+    applySystemBarPadding: Boolean = true,
     forcedBackGroundColor: Color? = null,
     content: @Composable () -> Unit,
 ) {

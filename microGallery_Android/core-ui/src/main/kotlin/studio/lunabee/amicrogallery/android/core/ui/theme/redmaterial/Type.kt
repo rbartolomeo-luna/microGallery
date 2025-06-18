@@ -2,9 +2,8 @@ package studio.lunabee.amicrogallery.android.core.ui.theme.redmaterial
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.FontFamily
-
-import androidx.compose.ui.text.googlefonts.GoogleFont
 import androidx.compose.ui.text.googlefonts.Font
+import androidx.compose.ui.text.googlefonts.GoogleFont
 import studio.lunabee.amicrogallery.core.ui.R
 
 val provider = GoogleFont.Provider(
