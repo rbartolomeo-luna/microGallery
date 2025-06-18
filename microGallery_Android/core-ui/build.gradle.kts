@@ -22,5 +22,6 @@ dependencies {
 
     api(projects.coreRes)
     implementation(libs.activity.ktx)
+    implementation(libs.navigation.runtime.android)
 
 }

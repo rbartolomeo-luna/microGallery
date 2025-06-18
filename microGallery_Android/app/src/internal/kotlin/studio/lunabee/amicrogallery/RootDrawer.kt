@@ -5,14 +5,20 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalNavigationDrawer
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavHostController
+import studio.lunabee.amicrogallery.android.core.ui.component.topappbar.MicroGalleryBottomBar
+import studio.lunabee.amicrogallery.calendar.CalendarDestination
+import studio.lunabee.amicrogallery.lastmonth.LastMonthDestination
+import studio.lunabee.amicrogallery.untimed.UntimedDestination
 import kotlin.reflect.KClass
 
 @Composable
@@ -26,10 +32,22 @@ fun RootDrawer(
         drawerState = drawerState,
         content = {
             MicroGalleryRootScreen {
-                MainNavGraph(
-                    navHostController = navHostController,
-                    startDestination = startDestination,
-                )
+                Scaffold(
+                    modifier = Modifier,
+                    bottomBar = { MicroGalleryBottomBar(
+                        navController = navHostController,
+                        navigateToCalendar = {navHostController.navigate(CalendarDestination)},
+                        navigateToUntimed= {navHostController.navigate(UntimedDestination)},
+                        navigateToLastMonth= {navHostController.navigate(LastMonthDestination)}
+                    ) }
+                    ) {
+                    MainNavGraph(
+                        contentPadding = it,
+                        navHostController = navHostController,
+                        startDestination = startDestination,
+                    )
+                }
+
             }
         },
         drawerContent = { DebugMenu() },
