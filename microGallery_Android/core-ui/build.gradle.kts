@@ -14,8 +14,6 @@ android {
 
 dependencies {
     implementation(platform(libs.androidxComposeBom))
-
-
     implementation(libs.androidxComposeFoundation)
     implementation(libs.androidxComposeMaterial3)
     implementation(libs.androidxComposeUi)
@@ -23,6 +21,6 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.4.0-alpha15")
 
     api(projects.coreRes)
+    implementation(libs.activity.ktx)
 
-    //implementation(libs.material3Jvmstubs)
 }

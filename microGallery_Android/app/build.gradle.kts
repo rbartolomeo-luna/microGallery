@@ -1,7 +1,11 @@
 plugins {
     alias(libs.plugins.kotlinxSerialization)
     alias(libs.plugins.lbAndroidApplication)
+    //id("kotlin-kapt")
+    //alias(libs.plugins.daggerHilt)
     alias(libs.plugins.lbAndroidFlavors)
+    //alias(libs.plugins.ksp)
+
 }
 
 android {
@@ -17,10 +21,7 @@ android {
 }
 
 dependencies {
-    //implementation(libs.navigationRuntimeJvmstubs)
-    implementation(libs.androidxHiltNavigationCompose)
-    //implementation(libs.jetbrains.compose.ui.util)
-    //implementation(libs.navigationComposeJvmstubs)
+    implementation(libs.androidxNavigationCompose)
     coreLibraryDesugaring(libs.desugarJdkLibs)
     implementation(platform(libs.androidxComposeBom))
     implementation(platform(libs.lbBom))
