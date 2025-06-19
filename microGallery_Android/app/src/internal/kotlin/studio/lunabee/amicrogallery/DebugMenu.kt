@@ -11,11 +11,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import studio.lunabee.compose.core.LbcTextSpec
+import androidx.navigation.NavHostController
 
 @SuppressLint("RestrictedApi")
 @Composable
 fun DebugMenu(
+    navHostController: NavHostController
 ) {
 
     LazyColumn(
@@ -26,11 +27,16 @@ fun DebugMenu(
     ) {
         item {
             Text(
-                text = LbcTextSpec.Raw("⛏️️ Debug menu 🛠️").string,
+                text = "Debug menu 😘",
                 style = MaterialTheme.typography.titleLarge,
                 textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            Text(
+                text = "You are on screen:  { id :  ${navHostController.currentDestination?.id}}",
+                style = MaterialTheme.typography.bodyMedium
+
             )
         }
     }

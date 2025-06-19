@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalNavigationDrawer
@@ -15,10 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavHostController
-import studio.lunabee.amicrogallery.android.core.ui.component.topappbar.MicroGalleryBottomBar
-import studio.lunabee.amicrogallery.calendar.CalendarDestination
-import studio.lunabee.amicrogallery.lastmonth.LastMonthDestination
-import studio.lunabee.amicrogallery.untimed.UntimedDestination
+import studio.lunabee.amicrogallery.bottomBar.MicroGalleryBottomBar
 import kotlin.reflect.KClass
 
 @Composable
@@ -35,10 +31,7 @@ fun RootDrawer(
                 Scaffold(
                     modifier = Modifier,
                     bottomBar = { MicroGalleryBottomBar(
-                        navController = navHostController,
-                        navigateToCalendar = {navHostController.navigate(CalendarDestination)},
-                        navigateToUntimed= {navHostController.navigate(UntimedDestination)},
-                        navigateToLastMonth= {navHostController.navigate(LastMonthDestination)}
+                        navController = navHostController
                     ) }
                     ) {
                     MainNavGraph(
@@ -50,7 +43,7 @@ fun RootDrawer(
 
             }
         },
-        drawerContent = { DebugMenu() },
+        drawerContent = { DebugMenu(navHostController = navHostController) },
     )
 }
 
@@ -78,3 +71,4 @@ fun MicroGalleryRootScreen(
         content()
     }
 }
+

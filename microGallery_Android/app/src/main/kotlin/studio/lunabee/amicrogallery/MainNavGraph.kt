@@ -10,11 +10,9 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import studio.lunabee.amicrogallery.android.core.ui.component.topappbar.MicroGalleryBottomBar
 import studio.lunabee.amicrogallery.calendar.CalendarDestination
 import studio.lunabee.amicrogallery.calendar.CalendarNavScope
 import studio.lunabee.amicrogallery.lastmonth.LastMonthDestination
