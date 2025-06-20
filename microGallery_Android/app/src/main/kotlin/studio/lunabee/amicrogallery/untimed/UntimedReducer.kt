@@ -8,7 +8,7 @@ import studio.lunabee.compose.presenter.asResult
 class UntimedReducer(
     override val coroutineScope: CoroutineScope,
     override val emitUserAction: (UntimedAction) -> Unit,
-) : LBReducer<UntimedUiState.Default, UntimedUiState, UntimedNavScope, UntimedAction, UntimedAction.EmptyAction> (){
+) : LBReducer<UntimedUiState.Default, UntimedUiState, UntimedNavScope, UntimedAction, UntimedAction.EmptyAction> () {
     override fun filterAction(action: UntimedAction): Boolean {
         return true
     }
@@ -17,10 +17,11 @@ class UntimedReducer(
         return true
     }
 
-    override suspend fun reduce(actualState: UntimedUiState.Default,
+    override suspend fun reduce(
+        actualState: UntimedUiState.Default,
         action: UntimedAction.EmptyAction,
-        performNavigation: (UntimedNavScope.() -> Unit) -> Unit): ReduceResult<UntimedUiState> {
-       return actualState.asResult()
+        performNavigation: (UntimedNavScope.() -> Unit) -> Unit,
+    ): ReduceResult<UntimedUiState> {
+        return actualState.asResult()
     }
-
 }

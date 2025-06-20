@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="studio.lunabee.amicrogallery.microGalleryApplication"
+        android:name="studio.lunabee.amicrogallery.MicroGalleryApplication"
         android:allowBackup="false"
 
         android:usesCleartextTraffic="true"

@@ -8,8 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 
 object CoreSpacing {
-    // Here goes your spacing
-    // val SpacingXs: Dp = 4.dp
+    const val Bottom_row_spacing = 16
 }
 
 @Composable

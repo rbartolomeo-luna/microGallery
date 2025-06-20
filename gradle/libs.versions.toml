@@ -1,6 +1,7 @@
 
-
 [versions]
+
+activityKtx = "1.10.1"
 agp = "8.10.1"
 androidxActivityCompose = "1.10.1"
 androidxAppcompat = "1.7.1"
@@ -29,17 +30,18 @@ lbMultiplatformLibrary = "0.9.1"
 lbResources = "1.0.0"
 lbcCore = "1.8.0"
 lbcPresenter = "1.4.0"
-skie = "0.10.2-preview.2.1.20"
-uiToolingPreviewDesktop = "1.7.0"
 material3Jvmstubs = "1.4.0-alpha15"
-navigationRuntimeJvmstubs = "2.9.0"
+material3alpha="1.4.0-alpha15"
 navigationComposeJvmstubs = "2.9.0"
-activityKtx = "1.10.1"
 navigationRuntimeAndroid = "2.9.0"
-
+navigationRuntimeJvmstubs = "2.9.0"
+skie = "0.10.2-preview.2.1.20"
+uiTextGoogleFont="1.8.2"
+uiToolingPreviewDesktop = "1.7.0"
 
 [libraries]
-jetbrains-compose-ui-util = { module = "org.jetbrains.compose.ui:ui-util", version = "1.7.1" }
+
+activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
 androidxActivityCompose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivityCompose" }
 androidxAppcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppcompat" }
 androidxComposeBom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
@@ -51,9 +53,11 @@ androidxNavigationCompose = { group = "androidx.navigation", name = "navigation-
 androidxRoomCompiler = { group = "androidx.room", name = "room-compiler", version.ref = "androidxRoom" }
 androidxRoomRuntime = { group = "androidx.room", name = "room-runtime", version.ref = "androidxRoom" }
 androidxSqliteBundled = { group = "androidx.sqlite", name = "sqlite-bundled", version.ref = "androidxSqlite" }
+composeMaterial3 = {group = "androidx.compose.material3", name = "material3", version.ref="material3alpha"}
 desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugarJdkLibs" }
 detekt = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
 gradleAndroid = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+jetbrains-compose-ui-util = { module = "org.jetbrains.compose.ui:ui-util", version = "1.7.1" }
 koinAndroid = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 koinCore = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 koinViewmodel = { group = "io.insert-koin", name = "koin-compose-viewmodel", version.ref = "koin" }
@@ -75,15 +79,15 @@ lbKtorKermit = { group = "studio.lunabee", name = "lbktor-kermit" }
 lbMultiplatformLibrary = { group = "studio.lunabee.plugins.multiplatform.library", name = "studio.lunabee.plugins.multiplatform.library.gradle.plugin", version.ref = "lbMultiplatformLibrary" }
 lbcCore = { group = "studio.lunabee.compose", name = "lbccore", version.ref = "lbcCore" }
 lbcPresenter = { group = "studio.lunabee.compose", name = "lbcpresenter", version.ref = "lbcPresenter" }
-uiToolingPreviewDesktop = { group = "androidx.compose.ui", name = "ui-tooling-preview-desktop", version.ref = "uiToolingPreviewDesktop" }
 material3Jvmstubs = { group = "androidx.compose.material3", name = "material3-jvmstubs", version.ref = "material3Jvmstubs" }
-navigationRuntimeJvmstubs = { group = "androidx.navigation", name = "navigation-runtime-jvmstubs", version.ref = "navigationRuntimeJvmstubs" }
-navigationComposeJvmstubs = { group = "androidx.navigation", name = "navigation-compose-jvmstubs", version.ref = "navigationComposeJvmstubs" }
-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
 navigation-runtime-android = { group = "androidx.navigation", name = "navigation-runtime-android", version.ref = "navigationRuntimeAndroid" }
-coilCompose ={group = "io.coil-kt.coil3", name="coil-compose", version.ref = "coilCompose"}
+navigationComposeJvmstubs = { group = "androidx.navigation", name = "navigation-compose-jvmstubs", version.ref = "navigationComposeJvmstubs" }
+navigationRuntimeJvmstubs = { group = "androidx.navigation", name = "navigation-runtime-jvmstubs", version.ref = "navigationRuntimeJvmstubs" }
+uiTextGoogleFonts = {group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref="uiTextGoogleFont"}
+uiToolingPreviewDesktop = { group = "androidx.compose.ui", name = "ui-tooling-preview-desktop", version.ref = "uiToolingPreviewDesktop" }
 
 [plugins]
+
 androidxRoom = { id = "androidx.room", version.ref = "androidxRoom" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 gradleAndroidApplication = { id = "com.android.application", version.ref = "agp" }

@@ -9,15 +9,18 @@ import androidx.compose.ui.graphics.painter.Painter
 
 @Composable
 fun NavBarButton(
-    onClick : () -> Unit,
-    icon : Painter,
-    description : String,
-    activated : Boolean
-){
+    onClick: () -> Unit,
+    icon: Painter,
+    description: String,
+    activated: Boolean,
+) {
     IconButton(onClick = onClick) {
-        Icon(icon, contentDescription = description,
-            tint = if (activated) {Color.Unspecified} else {
-                MaterialTheme.colorScheme.surfaceDim}
+        Icon(
+            icon,
+            contentDescription = description,
+            tint = if (activated) { Color.Unspecified } else {
+                MaterialTheme.colorScheme.surfaceDim
+            },
         )
     }
 }
