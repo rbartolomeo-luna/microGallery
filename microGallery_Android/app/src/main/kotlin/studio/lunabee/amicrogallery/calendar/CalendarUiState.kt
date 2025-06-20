@@ -1,12 +1,9 @@
 package studio.lunabee.amicrogallery.calendar
 
 import studio.lunabee.compose.presenter.PresenterUiState
+import studio.lunabee.microgallery.android.domain.Node
 
-sealed interface CalendarUiState : PresenterUiState {
-    val textUiShown : String
-    data class Default (
-        val count : Int
-    ) : CalendarUiState {
-        override val textUiShown: String = "hello from Calendar drawer"
-    }
-}
+data class CalendarUiState(
+    val textUiShown : String,
+    val rootNode : Node?
+) : PresenterUiState

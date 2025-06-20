@@ -62,8 +62,10 @@ kotlinCompose = { group = "org.jetbrains.kotlin", name = "compose-compiler-gradl
 kotlinxCoroutineBom = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-bom", version.ref = "kotlinxCoroutines" }
 kotlinxCoroutineCore = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core" }
 kotlinxSerializationJson = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+
 ktorAndroid = { group = "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
 ktorIos = { group = "io.ktor", name = "ktor-client-ios", version.ref = "ktor" }
+
 lbAndroidLibraryPlugin = { group = "studio.lunabee.plugins.android.library", name = "studio.lunabee.plugins.android.library.gradle.plugin", version.ref = "lbAndroidLibrary" }
 lbBom = { group = "studio.lunabee", name = "lunabee-bom", version.ref = "lbBom" }
 lbCore = { group = "studio.lunabee", name = "lbcore" }

@@ -1,9 +1,10 @@
 package studio.lunabee.amicrogallery.calendar
 
+import studio.lunabee.microgallery.android.domain.Node
 
 sealed interface CalendarAction {
 
-    sealed interface EmptyAction : CalendarAction
+    data object Beginning : CalendarAction
 
-    data object FetchEventsEmptyScreen : EmptyAction
+    data class StopRefreshing(val foundNode: Node) : CalendarAction
 }

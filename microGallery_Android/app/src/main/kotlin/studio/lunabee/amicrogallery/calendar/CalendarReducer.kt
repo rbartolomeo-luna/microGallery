@@ -1,26 +1,32 @@
 package studio.lunabee.amicrogallery.calendar
 
 import kotlinx.coroutines.CoroutineScope
-import studio.lunabee.compose.presenter.LBReducer
+import studio.lunabee.compose.presenter.LBSingleReducer
 import studio.lunabee.compose.presenter.ReduceResult
 import studio.lunabee.compose.presenter.asResult
 
 class CalendarReducer(
     override val coroutineScope: CoroutineScope,
     override val emitUserAction: (CalendarAction) -> Unit,
-) : LBReducer<CalendarUiState.Default, CalendarUiState, CalendarNavScope, CalendarAction, CalendarAction.EmptyAction> (){
-    override fun filterAction(action: CalendarAction): Boolean {
-        return true
-    }
+) : LBSingleReducer<CalendarUiState, CalendarNavScope, CalendarAction> (){
 
-    override fun filterUiState(actualState: CalendarUiState): Boolean {
-        return true
-    }
-
-    override suspend fun reduce(actualState: CalendarUiState.Default,
-        action: CalendarAction.EmptyAction,
+    override suspend fun reduce(actualState: CalendarUiState,
+        action: CalendarAction,
         performNavigation: (CalendarNavScope.() -> Unit) -> Unit): ReduceResult<CalendarUiState> {
-       return actualState.asResult()
+        return when(action) {
+            CalendarAction.Beginning -> actualState.asResult()
+            is CalendarAction.StopRefreshing -> actualState.copy(rootNode = action.foundNode).asResult()
+        }
     }
+/*
+    override suspend fun reduce(actualState: CalendarUiState,
+        action: CalendarAction,
+        performNavigation: (CalendarNavScope.() -> Unit) -> Unit): ReduceResult<CalendarUiState> {
+        return when(action) {
+            is CalendarAction.Beginning -> actualState
+            is CalendarAction.StopRefreshing -> CalendarUiState.GotTree(action.foundNode.data).asResult()
+        }
 
+    }
+*/
 }
