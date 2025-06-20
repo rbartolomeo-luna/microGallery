@@ -1,7 +1,5 @@
 package studio.lunabee.amicrogallery
 
-
-
 import android.util.Log
 import androidx.compose.animation.ExperimentalSharedTransitionApi
 import androidx.compose.animation.SharedTransitionLayout
@@ -26,33 +24,35 @@ private const val TAG = "MainNavGraph"
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
 fun MainNavGraph(
-    contentPadding : PaddingValues,
-    navHostController : NavHostController,
+    contentPadding: PaddingValues,
+    navHostController: NavHostController,
     startDestination: KClass<*>,
-){
-    Box (modifier = Modifier.fillMaxSize()){
+) {
+    Box(modifier = Modifier.fillMaxSize()) {
         SharedTransitionLayout {
             NavHost(
                 modifier = Modifier.padding(contentPadding),
                 navController = navHostController,
-                startDestination = startDestination
+                startDestination = startDestination,
             ) {
                 CalendarDestination.composable(
                     navGraphBuilder = this,
                     navScope = object : CalendarNavScope {
-                        override val navigateToMicroYear = { it: Int -> val temp = Log.d(TAG, "must navigate to year $it")}
+                        override val navigateToMicroYear = { year: Int ->
+                            Log.d(TAG, "must navigate to year $year")
+                            Unit
+                        }
                     },
                 )
                 UntimedDestination.composable(
                     navGraphBuilder = this,
-                    navScope = object : UntimedNavScope {}
+                    navScope = object : UntimedNavScope {},
                 )
                 LastMonthDestination.composable(
                     navGraphBuilder = this,
-                    navScope = object : LastMonthNavScope {}
+                    navScope = object : LastMonthNavScope {},
                 )
             }
         }
     }
-
 }

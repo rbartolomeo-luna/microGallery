@@ -8,7 +8,7 @@ import studio.lunabee.compose.presenter.asResult
 class CalendarReducer(
     override val coroutineScope: CoroutineScope,
     override val emitUserAction: (CalendarAction) -> Unit,
-) : LBReducer<CalendarUiState.Default, CalendarUiState, CalendarNavScope, CalendarAction, CalendarAction.EmptyAction> (){
+) : LBReducer<CalendarUiState.Default, CalendarUiState, CalendarNavScope, CalendarAction, CalendarAction.EmptyAction> () {
     override fun filterAction(action: CalendarAction): Boolean {
         return true
     }
@@ -17,10 +17,11 @@ class CalendarReducer(
         return true
     }
 
-    override suspend fun reduce(actualState: CalendarUiState.Default,
+    override suspend fun reduce(
+        actualState: CalendarUiState.Default,
         action: CalendarAction.EmptyAction,
-        performNavigation: (CalendarNavScope.() -> Unit) -> Unit): ReduceResult<CalendarUiState> {
-       return actualState.asResult()
+        performNavigation: (CalendarNavScope.() -> Unit) -> Unit,
+    ): ReduceResult<CalendarUiState> {
+        return actualState.asResult()
     }
-
 }

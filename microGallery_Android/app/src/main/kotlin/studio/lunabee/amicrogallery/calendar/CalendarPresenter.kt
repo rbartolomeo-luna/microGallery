@@ -9,11 +9,9 @@ import studio.lunabee.compose.presenter.LBSimpleReducer
 class CalendarPresenter : LBPresenter<CalendarUiState, CalendarNavScope, CalendarAction>() {
     override val flows: List<Flow<CalendarAction>> = emptyList()
 
-
     override fun getInitialState(): CalendarUiState = CalendarUiState.Default(5)
     override fun getReducerByState(actualState: CalendarUiState): LBSimpleReducer<CalendarUiState, CalendarNavScope, CalendarAction> {
         return CalendarReducer(viewModelScope, ::emitUserAction)
     }
     override val content: @Composable ((CalendarUiState) -> Unit) = { CalendarScreen(it) }
-
 }

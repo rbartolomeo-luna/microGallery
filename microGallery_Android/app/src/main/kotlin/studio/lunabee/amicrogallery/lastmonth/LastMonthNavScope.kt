@@ -1,5 +1,3 @@
 package studio.lunabee.amicrogallery.lastmonth
 
-interface LastMonthNavScope {
-
-}
+interface LastMonthNavScope

@@ -13,7 +13,6 @@ import studio.lunabee.amicrogallery.android.remote.CoreHttpClient
 object KoinHelper {
     fun init(block: KoinApplication.() -> Unit) {
         startKoin {
-
             modules(
                 PlatformSpecificModule,
                 LocalModule,
@@ -27,8 +26,6 @@ object KoinHelper {
 }
 
 expect val PlatformSpecificModule: Module
-
-
 
 private val LocalModule: Module = module {
     single<RoomAppDatabase> { buildRoomDatabase(builder = get(), context = Dispatchers.IO) }

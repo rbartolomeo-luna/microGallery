@@ -7,15 +7,14 @@ import org.koin.core.logger.Level
 import studio.lunabee.amicrogallery.android.shared.KoinHelper
 import studio.lunabee.amicrogallery.di.presentersModule
 
-class microGalleryApplication : Application() {
+class MicroGalleryApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         KoinHelper.init {
             androidLogger(level = Level.INFO)
-            androidContext(this@microGalleryApplication)
+            androidContext(this@MicroGalleryApplication)
 
             modules(presentersModule)
-
         }
     }
 }

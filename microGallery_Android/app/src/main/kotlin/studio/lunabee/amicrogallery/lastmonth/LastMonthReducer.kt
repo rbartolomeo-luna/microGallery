@@ -8,7 +8,7 @@ import studio.lunabee.compose.presenter.asResult
 class LastMonthReducer(
     override val coroutineScope: CoroutineScope,
     override val emitUserAction: (LastMonthAction) -> Unit,
-) : LBReducer<LastMonthUiState.Default, LastMonthUiState, LastMonthNavScope, LastMonthAction, LastMonthAction.EmptyAction> (){
+) : LBReducer<LastMonthUiState.Default, LastMonthUiState, LastMonthNavScope, LastMonthAction, LastMonthAction.EmptyAction> () {
     override fun filterAction(action: LastMonthAction): Boolean {
         return true
     }
@@ -17,10 +17,11 @@ class LastMonthReducer(
         return true
     }
 
-    override suspend fun reduce(actualState: LastMonthUiState.Default,
+    override suspend fun reduce(
+        actualState: LastMonthUiState.Default,
         action: LastMonthAction.EmptyAction,
-        performNavigation: (LastMonthNavScope.() -> Unit) -> Unit): ReduceResult<LastMonthUiState> {
-       return actualState.asResult()
+        performNavigation: (LastMonthNavScope.() -> Unit) -> Unit,
+    ): ReduceResult<LastMonthUiState> {
+        return actualState.asResult()
     }
-
 }

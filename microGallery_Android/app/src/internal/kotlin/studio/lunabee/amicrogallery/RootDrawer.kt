@@ -12,7 +12,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavHostController
 import studio.lunabee.amicrogallery.bottomBar.MicroGalleryBottomBar
 import kotlin.reflect.KClass
@@ -30,17 +29,18 @@ fun RootDrawer(
             MicroGalleryRootScreen {
                 Scaffold(
                     modifier = Modifier,
-                    bottomBar = { MicroGalleryBottomBar(
-                        navController = navHostController
-                    ) }
-                    ) {
+                    bottomBar = {
+                        MicroGalleryBottomBar(
+                            navController = navHostController,
+                        )
+                    },
+                ) {
                     MainNavGraph(
                         contentPadding = it,
                         navHostController = navHostController,
                         startDestination = startDestination,
                     )
                 }
-
             }
         },
         drawerContent = { DebugMenu(navHostController = navHostController) },
@@ -51,7 +51,6 @@ fun RootDrawer(
 fun MicroGalleryRootScreen(
     modifier: Modifier = Modifier,
     applySystemBarPadding: Boolean = true,
-    forcedBackGroundColor: Color? = null,
     content: @Composable () -> Unit,
 ) {
     Box(
@@ -71,4 +70,3 @@ fun MicroGalleryRootScreen(
         content()
     }
 }
-

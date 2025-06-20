@@ -6,7 +6,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(projects.data)
-            //implementation(projects.dataTemplate)
+            // implementation(projects.dataTemplate)
         }
     }
 }

@@ -4,8 +4,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 
 @Composable
-fun LastMonthScreen(lastMonthUiState : LastMonthUiState){
+fun LastMonthScreen(lastMonthUiState: LastMonthUiState) {
     Text(
-        text = lastMonthUiState.textUiShown
+        text = lastMonthUiState.textUiShown,
     )
 }

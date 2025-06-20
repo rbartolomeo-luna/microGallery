@@ -9,21 +9,21 @@ import studio.lunabee.amicrogallery.core.ui.R
 val provider = GoogleFont.Provider(
     providerAuthority = "com.google.android.gms.fonts",
     providerPackage = "com.google.android.gms",
-    certificates = R.array.com_google_android_gms_fonts_certs
+    certificates = R.array.com_google_android_gms_fonts_certs,
 )
 
 val bodyFontFamily = FontFamily(
     Font(
         googleFont = GoogleFont("Comic Neue"),
         fontProvider = provider,
-    )
+    ),
 )
 
 val displayFontFamily = FontFamily(
     Font(
         googleFont = GoogleFont("Alatsi"),
         fontProvider = provider,
-    )
+    ),
 )
 
 // Default Material 3 typography values
@@ -46,4 +46,3 @@ val AppTypography = Typography(
     labelMedium = baseline.labelMedium.copy(fontFamily = bodyFontFamily),
     labelSmall = baseline.labelSmall.copy(fontFamily = bodyFontFamily),
 )
-
